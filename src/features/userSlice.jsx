@@ -1,5 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// Note: when using typeScript using this, if you using js using props-types
+// export Interface UserType = {
+//     id: Number,
+//     name: String,
+//     username: String,
+//     email: String
+// }
 
 const initialState = {
   users: [],

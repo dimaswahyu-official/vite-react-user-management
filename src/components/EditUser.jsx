@@ -1,6 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editUser } from "../features/userSlice";
+import PropTypes from 'prop-types';
 
 const EditUser = ({ user }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -87,4 +89,15 @@ const EditUser = ({ user }) => {
   );
 };
 
+EditUser.propTypes = {
+  user: PropTypes.shape({
+    id : PropTypes.number,
+    name:PropTypes.string,
+    username:PropTypes.string,
+    email:PropTypes.string
+  })
+}
+
 export default EditUser;
+
+

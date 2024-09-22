@@ -1,10 +1,11 @@
-// import React from 'react'
+import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, fetchUsers } from "../features/userSlice";
 import EditTask from "./EditUser";
 
-const TaskList = () => {
+
+const UserList = () => {
   const userList = useSelector((state) => state.user.users);
   const loading = useSelector((state) => state.user.loading);
   const error = useSelector((state) => state.user.error);
@@ -27,9 +28,8 @@ const TaskList = () => {
 
   return (
       <div className="flex flex-col">
-        <h2> User List</h2>
-         
-          <div className="flex flex-col bg-gray-50 p-4 rounded-md shadow-sm">
+        <h2>User List</h2>
+          <div  className="flex flex-col bg-gray-50 p-4 rounded-md shadow-sm">
             {userList.map((data,i) => (
               <div
                 key={data.id+i}
@@ -62,4 +62,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList;
+export default UserList;
