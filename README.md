@@ -12,10 +12,12 @@ This application using vite + react for development
 - 
 
 for unit testing using vitest
-1) npx vitest --run test/sample.test.ts
+npx vitest --run test/sample.test.ts
 List Testing:
 1. rendering component on App.jsx
 2. rendering component on UserList.jsx
 3. returning initial state in slicer
 4. returning 10 data user in UserList.jsx
 
+I Deploy it on link below:
+https://vite-react-user-management.vercel.app/
